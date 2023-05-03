@@ -11,7 +11,7 @@ from data_loading import import_data
 from explainability import get_heatmap
 from xcm_model import xcm
 
-def xcm_start(X_train, y_train, X_test, y_test, yticklabels):
+def xcm_start(X_train, y_train, X_test, y_test, yticklabels, mts_sample_id=19):
 
     # Load dataset
     (
@@ -155,7 +155,8 @@ def xcm_start(X_train, y_train, X_test, y_test, yticklabels):
         X_test,
         y_train,
         y_test,
-        yticklabels=yticklabels
+        yticklabels=yticklabels,
+        mts_sample_id=mts_sample_id
     )
 
     return model

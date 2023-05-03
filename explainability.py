@@ -64,7 +64,7 @@ def grad_cam(data, model, layer_name, conv_type):
 
 
 def get_heatmap(
-    model, X_train, X_test, y_train_nonencoded, y_test_nonencoded, yticklabels=None
+    model, X_train, X_test, y_train_nonencoded, y_test_nonencoded, yticklabels=None, mts_sample_id=19
 ):
     """
     Get the heatmap supporting a prediction
@@ -96,7 +96,6 @@ def get_heatmap(
 
     # Retrieve configuration
     set_explanation = "test"
-    mts_sample_id = 19
     layer_name = "2D_Activation"
 
     # Get MTS sample
